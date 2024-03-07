@@ -18,7 +18,7 @@ def main():
 
 def create_new_tasks():
     tasks = {}
-    # Ajouter des tâches en utilisant les fonctions de la partie 2
+    
     add_task(tasks, 'task1', 'Faire quelque chose', '2024-03-15')
     add_task(tasks, 'task2', 'Terminer le TP', '2024-03-20')
 
@@ -26,4 +26,16 @@ def create_new_tasks():
 
 if __name__ == "__main__":
     main()
+
+
+def create_new_tasks():
+    tasks = {}
+    add_task(tasks, 'task1', 'Faire quelque chose', '2024-03-15')
+    add_task(tasks, 'task2', 'Terminer le TP', '2024-03-20')
+
+    save_option = input("Voulez-vous sauvegarder la liste de tâches ? (oui/non): ").lower()
+    if save_option == 'oui':
+        save_to_json(tasks, 'tasks_data.json')
+
+    return tasks
 
