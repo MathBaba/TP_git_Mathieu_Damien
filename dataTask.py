@@ -8,3 +8,9 @@ def load_from_json(filename):
     with open(filename, 'r') as json_file:
         data = json.load(json_file)
     return data
+
+import os
+
+def delete_database(filename):
+    if os.path.exists(filename):
+        os.remove(filename)
